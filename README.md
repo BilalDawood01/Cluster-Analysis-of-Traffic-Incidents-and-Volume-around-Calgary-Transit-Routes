@@ -51,11 +51,28 @@ Two key metrics were developed:
 ## Key Visualizations
 
 - **Figures 1-2**: Show traffic density and incident patterns across Calgary's transit network
-- **Figures 3-4**: Demonstrate that routes with bus lanes consistently rank in top 20 for both traffic incidents and volume
-- **Figure 5**: Reveals seasonal and temporal patterns in traffic incidents
-- **Figure 6**: Illustrates clear cluster separation in priority-flow impedance space
-- **Figure 7**: Maps spatial distribution of clusters across Calgary's geography
+<p align="center">
+  <img src="images/fig1-2.png" alt="Traffic Volume and Incidents Analysis" width="80%">
+</p>
+<p align="center"><em>Figures 1 & 2: Traffic volume mapping and incident distribution across Calgary's transit network</em></p>
 
+- **Figures 3-4**: Demonstrate that routes with bus lanes consistently rank in top 20 for both traffic incidents and volume
+<p align="center">
+  <img src="images/fig3-4.png" alt="Top Routes Analysis" width="80%">
+</p>
+<p align="center"><em>Figures 3 & 4: Top 20 routes by traffic incidents and volume - routes with bus lanes consistently rank highest, validating strategic placement</em></p>
+
+- **Figure 6**: Illustrates all clusters visualized on the map of Calgary
+<p align="center">
+  <img src="images/Fig%207%20-%20full%20cluster%20view.png" alt="Spatial Distribution of All Clusters" width="80%">
+</p>
+<p align="center"><em>Figure 7: Geographic distribution of route clusters across Calgary, showing spatial patterns in transit infrastructure needs</em></p>
+
+- **Figure 7**: Maps spatial distribution of clusters across Calgary's geography (seperated)
+<p align="center">
+  <img src="images/cluster0-4.png" alt="Cluster Analysis Results" width="80%">
+</p>
+<p align="center"><em>Cluster Analysis: Four distinct route categories identified through K-means clustering</em></p>
 ## Data Sources
 
 All datasets sourced from:
