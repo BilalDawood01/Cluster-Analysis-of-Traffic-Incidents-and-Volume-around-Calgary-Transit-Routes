@@ -1,0 +1,23 @@
+﻿ID Number,First Road,Second Road,Location,Quadrant,System Type,Owner,Status,Comments,x,y
+1,North Haven DR,Norseman RD,North Haven DR and Norseman RD,NW,PIT (Trap) System,Transit,Current,,-5937.477099999785,5662826.282199999
+2,4 ST,Beaver Dam RD,4 ST NE and Beaver Dam RD (north end),NE,PIT (Trap) and Barrier Gate System,Transit,Current,,-3854.374099999666,5663085.7863
+2,4 ST,Beaver Dam RD,4 ST NE and Beaver Dam RD (south end),NE,PIT (Trap) and Barrier Gate System,Transit,Current,,-3786.842100000009,5662960.212099999
+3,Centre ST,Beddington TR,Centre ST and Beddington TR,N,Gate and PIT (Trap) System,Transit,Current,,-4998.621000000276,5666256.4318
+4,Queensland PL,Diamond DR,Queensland PL and Diamond DR,SE,Automatic Gate System,Transit,Current,,-1996.7857999997213,5644936.3979
+5,Lake Michigan DR,Bow Bottom TR,Lake Michigan DR and Bow Bottom TR,SE,Automatic Gate System,Transit,Current,,-2080.7637999998406,5644998.0165
+6,Pinetown PL,56 ST,Pinetown PL and 56 ST ,NE,PIT (Trap) System,Transit,Current,,3291.1237000003457,5660072.5923
+7,24 AV,21 ST,24 AV and 21 ST,NE,PIT (Trap) System,Transit,Current,,-671.035500000231,5659780.6316
+8,66 AV,Sarcee TR,66 AV and Sarcee TR,NW,Automatic Gate System,Transit,Current,,-12241.465099999681,5664374.0384
+9,Scrufield DR,Crowfoot TR,Scrufield DR and Crowfoot TR,NW,Automatic Gate System,Transit,Current,,-14756.624499999918,5665121.010299999
+10,40 ST,126 AV,40 ST SE and 126 AV (North end),SE,Automatic Gate System,Transit,Current,,2102.7275000000373,5644543.5977
+10,40 ST,126 AV,40 ST SE and 126 AV(south end),SE,Automatic Gate System,Transit,Current,,2122.4227999998257,5644325.5019000005
+11,Calgary Airport,Calgary Airport,Calgary Airport,NE,Automatic Gate System,Airport,Current,,-689.8811999997124,5666376.452500001
+12,Silver Springs GA,Varsity Estates PL,Silver Springs Gate and Varsity Estates PL,NW,PIT (Trap) System,Transit,Decomissioned,"Decomissioned on Dec 15, 2003. No longer Transit's asset and responsibility. Trap removed and crossing still open to fire. Fire to maintain this.",-12689.835799999535,5663036.9307
+13,Nose Hill DR,Silverspring RD,Nose Hill DR and Silverspring RD,NW,PIT (Trap) System,Transit,Decomissioned,"Decomissioned on Dec 15, 2003. No longer Transit's assets, trap removed and crossing closed permanently.",-14817.860999999568,5663726.892999999
+14,Canada Olympic RD,Canada Olympic GA,Canada Olympic RD and Canada Olympic GA,SW,Automatic Gate System,Canada Olympic Park,Current,"Decommissioned for ring road construction. The electronics from the gate (the Opticom TSP equipment including the detector on the pole, and the Vertigate gate control board) was removed on July 7, 2020. The gate will be in the open position.",-15341.079699999653,5660867.213300001
+15,58 ST,Strathcona DR,58 ST and Strathcona DR ,SW,PIT (Trap) and Barrier Gate System,Transit,Future,"Trap & chain link gate system is currently there. CT is reserving the right to use this crossing, subject to community input to open up this crossing to buses.",-12035.583700000308,5656154.4761
+16,Fortress DR,Fortress Rise,Fortress DR and Fortress Rise,SW,To Be Determined,Transit,Future,"The trigger for the bus-only crossing on Springbank Boulevard has been tied to 10,000 vehicles per the ASP. The bus-only crossing could also be initiated when a transit route betn 69 and 85 St is established.",-14543.341300000437,5653796.3278
+17,Tuscany,Tuscany,Tuscany,NW,To Be Determined,Transit,Future,,,
+18,Rockyvale DR,Rockcliffe Landing,Rockyvale DR and Rockcliffe Landing,NW,PIT (Trap) and Barrier Gate System,Transit,Current,Built by developer. No bus route using this as of April 2022 and is protected for future routes.,-17072.23890000023,5668145.958900001
+19,Coventry Hills WY,Coville CR,Coventry Hills WY and Coville CR,NE,To Be Determined,Transit,Future,"Reserved for bus only crossing. Nothing has been built, but identified as potential bus route to service Coventry Hills & Stoney Industrial Area (north of CT Stoney Transit Facility).",-2776.5122999995947,5670326.536
+20,Kincora Glen RD,Kincora GA,Kincora Glen RD and Kincora GA,NW,Chain,Transit,Future,"No system have been built. Barricaded & Chain linked gate system currently in place for CPS & emergency access. As this crossing is not developer funded, Transit will need to fund this",-10187.299499999732,5670063.5320999995

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c299fd92e26d83c4be75817544f1ea0e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+    <div style="position: fixed; 
+                bottom: 50px; right: 50px; 
+                border:2px solid grey; z-index:9999; 
+                background-color:white;
+                padding: 10px;
+                border-radius: 5px;
+                ">
+      <h4>Bus Lane Types</h4>
+      <div>
+        <span style="display:inline-block; width:15px; height:15px; 
+                     background-color:#e74c3c; margin-right:5px;"></span>
+        Bus Only Lane
+      </div>
+      <div>
+        <span style="display:inline-block; width:15px; height:15px; 
+                     background-color:#3498db; margin-right:5px;"></span>
+        Part Time Reserved Bus Lane
+      </div>
+      <div>
+        <span style="display:inline-block; width:15px; height:15px; 
+                     background-color:#2ecc71; margin-right:5px;"></span>
+        Bus Only Left Turn Lane
+      </div>
+      <div>
+        <span style="display:inline-block; width:15px; height:15px; 
+                     background-color:#f39c12; margin-right:5px;"></span>
+        Bus Only Ramp
+      </div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_c299fd92e26d83c4be75817544f1ea0e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c299fd92e26d83c4be75817544f1ea0e = L.map(
+                "map_c299fd92e26d83c4be75817544f1ea0e",
+                {
+                    center: [51.0447, -114.0719],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7649495af77a2c81c1f17e34e6767385 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_7649495af77a2c81c1f17e34e6767385.addTo(map_c299fd92e26d83c4be75817544f1ea0e);
+        
+    
+            var marker_cluster_422a1f0f5aa45a2c3f0aa6a35faae3c2 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_e0d0e967d0fbbac2a5779bddc638bd43 = L.circleMarker(
+                [51.0914061, -114.062493],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_422a1f0f5aa45a2c3f0aa6a35faae3c2);
+        
+    
+        var popup_4ad79ef298e506fe83fd1b6c4c72cd3b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6814f22d2ca13dc82ea06ef51f8b8d3f = $(`<div id="html_6814f22d2ca13dc82ea06ef51f8b8d3f" style="width: 100.0%; height: 100.0%;">         <strong>Bus Lane ID: 4</strong><br>         From: Centre ST and 43 AV<br>         To: Centre ST and Mcknight BV<br>         Direction: NB<br>         Type: Bus Only Lane<br>         Commission Date: 2/1/2013<br>         Length: 640.0 m         </div>`)[0];
+                popup_4ad79ef298e506fe83fd1b6c4c72cd3b.setContent(html_6814f22d2ca13dc82ea06ef51f8b8d3f);
+            
+        
+
+        circle_marker_e0d0e967d0fbbac2a5779bddc638bd43.bindPopup(popup_4ad79ef298e506fe83fd1b6c4c72cd3b)
+        ;
+
+        
+    
+    
+            var circle_marker_a10971c218d530562ded711754a5130f = L.circleMarker(
+                [50.999867, -114.1179135],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_422a1f0f5aa45a2c3f0aa6a35faae3c2);
+        
+    
+        var popup_9eee16dc6e437483e9ff63bc68a3ec91 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5314ad608b284cad137fd66f33a451c9 = $(`<div id="html_5314ad608b284cad137fd66f33a451c9" style="width: 100.0%; height: 100.0%;">         <strong>Bus Lane ID: 13</strong><br>         From: Crowchild TR and Glenmore TR<br>         To: Crowchild TR and Glenmore TR<br>         Direction: SBLT<br>         Type: Bus Only Left Turn Lane<br>         Commission Date: 12/1/2019<br>         Length: 57.0 m         </div>`)[0];
+                popup_9eee16dc6e437483e9ff63bc68a3ec91.setContent(html_5314ad608b284cad137fd66f33a451c9);
+            
+        
+
+        circle_marker_a10971c218d530562ded711754a5130f.bindPopup(popup_9eee16dc6e437483e9ff63bc68a3ec91)
+        ;
+
+        
+    
+    
+            var circle_marker_227e0a778bffb20e43e97e6954f5b2b8 = L.circleMarker(
+                [50.999867, -114.1179135],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f39c12", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_422a1f0f5aa45a2c3f0aa6a35faae3c2);
+        
+    
+        var popup_70197dcd45b231a3ea3a273e8193cd30 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_147d409202def946f3275d21608c1bc1 = $(`<div id="html_147d409202def946f3275d21608c1bc1" style="width: 100.0%; height: 100.0%;">         <strong>Bus Lane ID: 14</strong><br>         From: Crowchild TR and Glenmore TR<br>         To: Crowchild TR and Glenmore TR<br>         Direction: EB<br>         Type: Bus Only Ramp<br>         Commission Date: 12/1/2019<br>         Length: 174.0 m         </div>`)[0];
+                popup_70197dcd45b231a3ea3a273e8193cd30.setContent(html_147d409202def946f3275d21608c1bc1);
+            
+        
+
+        circle_marker_227e0a778bffb20e43e97e6954f5b2b8.bindPopup(popup_70197dcd45b231a3ea3a273e8193cd30)
+        ;
+
+        
+    
+    
+            var circle_marker_d0def9e5a27bcd71b355fa05608b16b9 = L.circleMarker(
+                [51.019073, -114.11766],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 1}
+            ).addTo(marker_cluster_422a1f0f5aa45a2c3f0aa6a35faae3c2);
+        
+    
+        var popup_9fde761f718577121add8b5b57ae1248 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a9fa1871f50439e40512a8c9081c004b = $(`<div id="html_a9fa1871f50439e40512a8c9081c004b" style="width: 100.0%; height: 100.0%;">         <strong>Bus Lane ID: 19</strong><br>         From: Crowchild TR and 33 AV<br>         To: Crowchild TR and 33 AV<br>         Direction: NB<br>         Type: Bus only through lane (stop on porkchop island)<br>         Commission Date: Unknown<br>         Length: 35.0 m         </div>`)[0];
+                popup_9fde761f718577121add8b5b57ae1248.setContent(html_a9fa1871f50439e40512a8c9081c004b);
+            
+        
+
+        circle_marker_d0def9e5a27bcd71b355fa05608b16b9.bindPopup(popup_9fde761f718577121add8b5b57ae1248)
+        ;
+
+        
+    
+    
+            marker_cluster_422a1f0f5aa45a2c3f0aa6a35faae3c2.addTo(map_c299fd92e26d83c4be75817544f1ea0e);
+        
+    
+            var poly_line_04bd2b82a23b2a73c8ad21f14ee28dbb = L.polyline(
+                [[51.0533357, -114.0496546], [51.0954196, -114.033597]],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e74c3c", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c299fd92e26d83c4be75817544f1ea0e);
+        
+    
+        var popup_796d02622acba83a49b856b0a8faa558 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2577f7b39bb80e96e28a0b92aa52f339 = $(`<div id="html_2577f7b39bb80e96e28a0b92aa52f339" style="width: 100.0%; height: 100.0%;">         <strong>Bus Lane ID: 3</strong><br>         From: Edmonton TR<br>         To: Mcknight BV<br>         Direction: SB<br>         Type: Bus Only Lane (along far side stop)<br>         Commission Date: 5/1/2015<br>         Length: 29.0 m         </div>`)[0];
+                popup_796d02622acba83a49b856b0a8faa558.setContent(html_2577f7b39bb80e96e28a0b92aa52f339);
+            
+        
+
+        poly_line_04bd2b82a23b2a73c8ad21f14ee28dbb.bindPopup(popup_796d02622acba83a49b856b0a8faa558)
+        ;
+
+        
+    
+    
+            var poly_line_12d9cf156b235af5751be558f60438ec = L.polyline(
+                [[51.0997186, -114.0624766], [51.0914061, -114.062493]],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e74c3c", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c299fd92e26d83c4be75817544f1ea0e);
+        
+    
+        var popup_dbb8578ab0e07c621207e0609e31d360 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9ed35344ffbf0f4276426ae488b67e96 = $(`<div id="html_9ed35344ffbf0f4276426ae488b67e96" style="width: 100.0%; height: 100.0%;">         <strong>Bus Lane ID: 5</strong><br>         From: Centre ST and 54 AV<br>         To: Centre ST and Mcknight BV<br>         Direction: SB<br>         Type: Bus Only Lane<br>         Commission Date: 2/1/2013<br>         Length: 470.0 m         </div>`)[0];
+                popup_dbb8578ab0e07c621207e0609e31d360.setContent(html_9ed35344ffbf0f4276426ae488b67e96);
+            
+        
+
+        poly_line_12d9cf156b235af5751be558f60438ec.bindPopup(popup_dbb8578ab0e07c621207e0609e31d360)
+        ;
+
+        
+    
+    
+            var poly_line_6a060c57ce4f98303b4f4a3d2f9cb251 = L.polyline(
+                [[51.0433522, -114.0414883], [51.0377584, -114.0252312]],
+                {"bubblingMouseEvents": true, "color": "#3498db", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3498db", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_c299fd92e26d83c4be75817544f1ea0e);
+        
+    
+        var popup_b9390f985125f03bd2b63883e0aef447 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c419cf471750fce99cf3058dadbf01ee = $(`<div id="html_c419cf471750fce99cf3058dadbf01ee" style="width: 100.0%; height: 100.0%;">         <strong>Bus Lane ID: 6</strong><br>         From: 9 AV and 8 ST<br>         To: 9 AV and 15 ST<br>         Direction: EB<br>         Type: Part Time Reserved Bus Lane. Mon - Fri: 03:30PM-06:00 PM<br>         Commission Date: 12/1/2011<br>         Length: 1299.0 m         </div>`)[0];
+                popup_b9390f985125f03bd2b63883e0aef447.setContent(html_c419cf471750fce99cf3058dadbf01ee);
+            
+        
+
+        poly_line_6a060c57ce4f98303b4f4a3d2f9cb251.bindPopup(popup_b9390f985125f03bd2b63883e0aef447)
+        ;
+
+        
+    
+    
+            var poly_line_7a23bd77f62325014a1ae94775a2e03f = L.polyline(
+                [[51.0377584, -114.0252312], [51.0433522, -114.0414883]],
+                {"bubblingMouseEvents": true, "color": "#3498db", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3498db", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_c299fd92e26d83c4be75817544f1ea0e);
+        
+    
+        var popup_8660e1010e59c33c6e60b99c6bfbf5a7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_06f82c5b792094eccae0bd275b39a8c4 = $(`<div id="html_06f82c5b792094eccae0bd275b39a8c4" style="width: 100.0%; height: 100.0%;">         <strong>Bus Lane ID: 7</strong><br>         From: 9 AV and 15 ST<br>         To: 9 AV and 8 ST<br>         Direction: WB<br>         Type: Part Time Reserved Bus Lane. Mon - Fri: 07:00AM-08:30 AM<br>         Commission Date: 12/1/2011<br>         Length: 1291.0 m         </div>`)[0];
+                popup_8660e1010e59c33c6e60b99c6bfbf5a7.setContent(html_06f82c5b792094eccae0bd275b39a8c4);
+            
+        
+
+        poly_line_7a23bd77f62325014a1ae94775a2e03f.bindPopup(popup_8660e1010e59c33c6e60b99c6bfbf5a7)
+        ;
+
+        
+    
+    
+            var poly_line_a9429b0c14d84d84a7f57ea561e480bc = L.polyline(
+                [[51.0762471, -113.9583181], [51.0716794, -113.958342]],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e74c3c", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c299fd92e26d83c4be75817544f1ea0e);
+        
+    
+        var popup_206885f3cf1b1ad8d724689a38216479 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6a849288bb2367925b46d7bdd29727d6 = $(`<div id="html_6a849288bb2367925b46d7bdd29727d6" style="width: 100.0%; height: 100.0%;">         <strong>Bus Lane ID: 20</strong><br>         From: 52 ST and 26 AV<br>         To: 52 ST and Rundlehorn DR<br>         Direction: SB<br>         Type: Bus Only Lane<br>         Commission Date: 11/22/2021<br>         Length: Unknown m         </div>`)[0];
+                popup_206885f3cf1b1ad8d724689a38216479.setContent(html_6a849288bb2367925b46d7bdd29727d6);
+            
+        
+
+        poly_line_a9429b0c14d84d84a7f57ea561e480bc.bindPopup(popup_206885f3cf1b1ad8d724689a38216479)
+        ;
+
+        
+    
+    
+            var poly_line_e257124d3aedad1835e36f60f1c3cc49 = L.polyline(
+                [[51.0716794, -113.958342], [51.0762471, -113.9583181]],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e74c3c", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c299fd92e26d83c4be75817544f1ea0e);
+        
+    
+        var popup_7f2bfe07fd78f917110ed5f07e3cc65a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9396024d2af6fe773de83d9d002f7476 = $(`<div id="html_9396024d2af6fe773de83d9d002f7476" style="width: 100.0%; height: 100.0%;">         <strong>Bus Lane ID: 21</strong><br>         From: 52 ST and Rundlehorn DR<br>         To: 52 ST and 26 AV<br>         Direction: NB<br>         Type: Bus Only Lane<br>         Commission Date: 11/22/2021<br>         Length: Unknown m         </div>`)[0];
+                popup_7f2bfe07fd78f917110ed5f07e3cc65a.setContent(html_9396024d2af6fe773de83d9d002f7476);
+            
+        
+
+        poly_line_e257124d3aedad1835e36f60f1c3cc49.bindPopup(popup_7f2bfe07fd78f917110ed5f07e3cc65a)
+        ;
+
+        
+    
+    
+            var poly_line_134d90308debb4b10da4c41795dd5142 = L.polyline(
+                [[51.0600604, -113.9584796], [51.0533949, -113.9558764]],
+                {"bubblingMouseEvents": true, "color": "#3498db", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#3498db", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c299fd92e26d83c4be75817544f1ea0e);
+        
+    
+        var popup_dfa7e6549c743fd0ee6f781de7d1710d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3a2aa6cd58a4e9b21d0901f203424b22 = $(`<div id="html_3a2aa6cd58a4e9b21d0901f203424b22" style="width: 100.0%; height: 100.0%;">         <strong>Bus Lane ID: 22</strong><br>         From: 52 ST and Marlborough Dr<br>         To: 52 ST and Memorial DR<br>         Direction: SB<br>         Type: Part Time Reserved Bus Lane. Mon - Fri: 07:00AM-09:00AM and 03:00PM-06:00PM<br>         Commission Date: 11/22/2021<br>         Length: Unknown m         </div>`)[0];
+                popup_dfa7e6549c743fd0ee6f781de7d1710d.setContent(html_3a2aa6cd58a4e9b21d0901f203424b22);
+            
+        
+
+        poly_line_134d90308debb4b10da4c41795dd5142.bindPopup(popup_dfa7e6549c743fd0ee6f781de7d1710d)
+        ;
+
+        
+    
+    
+            var poly_line_e42445c66413493ac81907b40b227a54 = L.polyline(
+                [[51.0622572, -113.9585344], [51.0600604, -113.9584796]],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e74c3c", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c299fd92e26d83c4be75817544f1ea0e);
+        
+    
+        var popup_faccb8b65239b96b176e933c9ab08d96 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cfbd2151c771240bf13ba995b557866f = $(`<div id="html_cfbd2151c771240bf13ba995b557866f" style="width: 100.0%; height: 100.0%;">         <strong>Bus Lane ID: 22</strong><br>         From: 52 ST and Marbank DR<br>         To: 52 ST and Marlborough Dr<br>         Direction: SB<br>         Type: Bus Only Lane<br>         Commission Date: 11/22/2021<br>         Length: Unknown m         </div>`)[0];
+                popup_faccb8b65239b96b176e933c9ab08d96.setContent(html_cfbd2151c771240bf13ba995b557866f);
+            
+        
+
+        poly_line_e42445c66413493ac81907b40b227a54.bindPopup(popup_faccb8b65239b96b176e933c9ab08d96)
+        ;
+
+        
+    
+    
+            var poly_line_c87140b500771d603d3d7010a6680917 = L.polyline(
+                [[50.931421, -113.9579412], [50.9341922, -113.9582862]],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e74c3c", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c299fd92e26d83c4be75817544f1ea0e);
+        
+    
+        var popup_5f1a9c6668cb55f8935f2b1661f14780 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d37888937b074930b23eabacec008c7d = $(`<div id="html_d37888937b074930b23eabacec008c7d" style="width: 100.0%; height: 100.0%;">         <strong>Bus Lane ID: 23</strong><br>         From: 52 ST and 130 AV<br>         To: 52 ST and 126 AV<br>         Direction: NB<br>         Type: Bus Only Lane<br>         Commission Date: 11/22/2021<br>         Length: Unknown m         </div>`)[0];
+                popup_5f1a9c6668cb55f8935f2b1661f14780.setContent(html_d37888937b074930b23eabacec008c7d);
+            
+        
+
+        poly_line_c87140b500771d603d3d7010a6680917.bindPopup(popup_5f1a9c6668cb55f8935f2b1661f14780)
+        ;
+
+        
+    
+    
+            var poly_line_23545d6506e7ec4b50057b57cd03adea = L.polyline(
+                [[51.0533949, -113.9558764], [51.0551256, -113.9566412]],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e74c3c", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c299fd92e26d83c4be75817544f1ea0e);
+        
+    
+        var popup_dc84faf838e347a556a4dd162db07d01 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_937395a068abcdb21ac396610fb7cf32 = $(`<div id="html_937395a068abcdb21ac396610fb7cf32" style="width: 100.0%; height: 100.0%;">         <strong>Bus Lane ID: 23</strong><br>         From: 52 ST and Memorial DR<br>         To: 52 ST and 4 AV<br>         Direction: NB<br>         Type: Bus Only Lane<br>         Commission Date: 11/22/2021<br>         Length: Unknown m         </div>`)[0];
+                popup_dc84faf838e347a556a4dd162db07d01.setContent(html_937395a068abcdb21ac396610fb7cf32);
+            
+        
+
+        poly_line_23545d6506e7ec4b50057b57cd03adea.bindPopup(popup_dc84faf838e347a556a4dd162db07d01)
+        ;
+
+        
+    
+    
+            var poly_line_25f0f49d6a97ec961ab6962a4d9679ee = L.polyline(
+                [[51.0600604, -113.9584796], [51.0622572, -113.9585344]],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#e74c3c", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_c299fd92e26d83c4be75817544f1ea0e);
+        
+    
+        var popup_b5d88e03acad83f1849f15495adc75a6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6aec28878b80694acc0b7f2bea48adfe = $(`<div id="html_6aec28878b80694acc0b7f2bea48adfe" style="width: 100.0%; height: 100.0%;">         <strong>Bus Lane ID: 23</strong><br>         From: 52 ST and Marlborough DR<br>         To: 52 ST and Marbank DR<br>         Direction: NB<br>         Type: Bus Only Lane<br>         Commission Date: 11/22/2021<br>         Length: Unknown m         </div>`)[0];
+                popup_b5d88e03acad83f1849f15495adc75a6.setContent(html_6aec28878b80694acc0b7f2bea48adfe);
+            
+        
+
+        poly_line_25f0f49d6a97ec961ab6962a4d9679ee.bindPopup(popup_b5d88e03acad83f1849f15495adc75a6)
+        ;
+
+        
+    
+</script>
+</html>

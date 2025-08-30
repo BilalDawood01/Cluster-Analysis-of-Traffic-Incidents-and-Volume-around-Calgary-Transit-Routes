@@ -1,0 +1,20 @@
+ID Number,From,To,Direction,Lane Category,Lane Type,Comission Date,Status,Length m,From_Lat,From_Lon,To_Lat,To_Lon
+1,Ogden RD and Glenmore TR South Int,Ogden RD and Glenmore TR North Int,NB,Reserved Lane for Buses,Bus Only Lane,3/1/2018,Current,185,Invalid,Invalid,Invalid,Invalid
+1,Ogden RD and Glenmore TR North Int,Ogden RD and Glenmore TR South Int,SB,Reserved Lane for Buses,Bus Only Lane,3/1/2018,Current,179,Invalid,Invalid,Invalid,Invalid
+2,Bowness RD and 16 AV,Bowness RD and Shaganappi TR,SB,Reserved Lane for Buses,Part Time Reserved Bus Lane. Mon - Fri : 06:30AM-09:00 AM,3/1/2007,Current,216,Invalid,Invalid,Invalid,Invalid
+3,Edmonton TR,Mcknight BV,SB,Reserved Lane for Buses,Bus Only Lane (along far side stop),5/1/2015,Current,29,51.0533357,-114.0496546,51.0954196,-114.033597
+4,Centre ST and 43 AV,Centre ST and Mcknight BV,NB,Reserved Lane for Buses,Bus Only Lane,2/1/2013,Current,640,51.0914061,-114.062493,51.0914061,-114.062493
+5,Centre ST and 54 AV,Centre ST and Mcknight BV,SB,Reserved Lane for Buses,Bus Only Lane,2/1/2013,Current,470,51.0997186,-114.0624766,51.0914061,-114.062493
+6,9 AV and 8 ST,9 AV and 15 ST,EB,Reserved Lane for Buses,Part Time Reserved Bus Lane. Mon - Fri: 03:30PM-06:00 PM,12/1/2011,Current,1299,51.0433522,-114.0414883,51.0377584,-114.0252312
+7,9 AV and 15 ST,9 AV and 8 ST,WB,Reserved Lane for Buses,Part Time Reserved Bus Lane. Mon - Fri: 07:00AM-08:30 AM,12/1/2011,Current,1291,51.0377584,-114.0252312,51.0433522,-114.0414883
+13,Crowchild TR and Glenmore TR,Crowchild TR and Glenmore TR,SBLT,Reserved Lane for Buses,Bus Only Left Turn Lane,12/1/2019,Current,57,50.999867,-114.1179135,50.999867,-114.1179135
+14,Crowchild TR and Glenmore TR,Crowchild TR and Glenmore TR,EB,Reserved Lane for Buses,Bus Only Ramp,12/1/2019,Current,174,50.999867,-114.1179135,50.999867,-114.1179135
+18,North of Beddington TR,Beddington TR Bridge,SB,Reserved Lane for Buses,Bus Only Lane,,Current,97,unknown,unknown,unknown ,unknown
+19,Crowchild TR and 33 AV,Crowchild TR and 33 AV,NB,Reserved Lane for Buses,Bus only through lane (stop on porkchop island),,Current,35,51.019073,-114.11766,51.019073,-114.11766
+20,52 ST and 26 AV,52 ST and Rundlehorn DR,SB,Reserved Lane for Buses,Bus Only Lane,11/22/2021,Current,,51.0762471,-113.9583181,51.0716794,-113.958342
+21,52 ST and Rundlehorn DR,52 ST and 26 AV,NB,Reserved Lane for Buses,Bus Only Lane,11/22/2021,Current,,51.0716794,-113.958342,51.0762471,-113.9583181
+22,52 ST and Marlborough Dr,52 ST and Memorial DR,SB,Reserved Lane for Buses,Part Time Reserved Bus Lane. Mon - Fri: 07:00AM-09:00AM and 03:00PM-06:00PM,11/22/2021,Current,,51.0600604,-113.9584796,51.0533949,-113.9558764
+22,52 ST and Marbank DR,52 ST and Marlborough Dr,SB,Reserved Lane for Buses,Bus Only Lane,11/22/2021,Current,,51.0622572,-113.9585344,51.0600604,-113.9584796
+23,52 ST and 130 AV,52 ST and 126 AV,NB,Reserved Lane for Buses,Bus Only Lane,11/22/2021,Current,,50.931421,-113.9579412,50.9341922,-113.9582862
+23,52 ST and Memorial DR,52 ST and 4 AV,NB,Reserved Lane for Buses,Bus Only Lane,11/22/2021,Current,,51.0533949,-113.9558764,51.0551256,-113.9566412
+23,52 ST and Marlborough DR,52 ST and Marbank DR,NB,Reserved Lane for Buses,Bus Only Lane,11/22/2021,Current,,51.0600604,-113.9584796,51.0622572,-113.9585344
